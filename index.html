@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Sister Day 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- 🌸 Welcome Screen -->
+  <div id="welcomeScreen" class="screen">
+    <h1 class="welcome-text">Welcome My Lovely Behen ❤</h1>
+    <button onclick="startExperience()" class="start-btn">Click to Begin</button>
+  </div>
+
+  <!-- 🌸 Gate Animation Screen -->
+  <div id="gateScreen" class="screen hidden">
+    <div class="gate left-gate"></div>
+    <div class="gate right-gate"></div>
+    <div class="gate-message">Ready for the Magic?</div>
+  </div>
+
+  <!-- 🌸 Questions -->
+  <div id="questionContainer" class="screen hidden">
+    <div id="questionBox">
+      <h2 id="questionText"></h2>
+      <div id="optionsContainer"></div>
+    </div>
+  </div>
+
+  <!-- 🌸 Memory Pages -->
+  <div id="memoryContainer" class="screen hidden">
+    <img id="memoryImage" src="" alt="Memory" />
+    <p id="memoryCaption"></p>
+    <button onclick="nextMemory()">Next</button>
+  </div>
+
+  <!-- 🌸 Final Page -->
+  <div id="finalPage" class="screen hidden">
+    <img src="final-memory.jpg" class="final-pic" />
+    <h2>Happy Sister Day ❤</h2>
+    <p class="final-message">
+      You are the biggest blessing in my life. Thank you for everything. LOVE YOU BEHNA ❤
+    </p>
+    <p id="surpriseCode" class="code-display"></p>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
