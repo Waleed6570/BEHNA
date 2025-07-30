@@ -2,65 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Sister Day 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Sister Day</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- 🌸 Welcome Screen -->
-  <div id="welcomeScreen" class="screen active">
-    <h1 class="welcome-text">Welcome Behan ❤️</h1>
-    <button class="start-btn" onclick="startExperience()">Click to Start</button>
+  <!-- Welcome Screen -->
+  <div id="welcomeScreen" class="screen">
+    <h1 class="welcome-heading">WELCOME MERI PYARI BEHNA ❤️</h1>
+    <button onclick="startExperience()" class="start-btn">Enter</button>
   </div>
 
-  <!-- 🌸 Gate Screen -->
-  <div id="gateScreen" class="screen hidden">
-    <div class="gate left-gate"></div>
-    <div class="gate right-gate"></div>
-    <div class="gate-message">🎀 Surprise Loading...</div>
-  </div>
-
-  <!-- 🌸 Question Container -->
-  <div id="questionContainer" class="screen hidden">
-    <div id="questionBox">
-      <h2 id="questionText"></h2>
-      <div id="optionsContainer"></div>
+  <!-- Question Screens -->
+  <div id="question1" class="screen hidden">
+    <h1 class="question-heading">Q1: Kya aapko mujh par trust hai?</h1>
+    <form>
+      <label><input type="radio" name="q1" value="1"> Hamesha se tha ❤️</label>
+      <label><input type="radio" name="q1" value="2"> Thoda kam ho gaya hai</label>
+      <label><input type="radio" name="q1" value="3"> Khud se bhi zyada hai ❤️‍🔥</label>
       <p class="answer-label">ANSWER WITH ❤️</p>
+      <button type="button" onclick="nextQuestion(1)">Next</button>
+    </form>
+  </div>
+
+  <div id="question2" class="screen hidden">
+    <h1 class="question-heading">Q2: Agar main superhero hota, to kaunsa hota?</h1>
+    <form>
+      <label><input type="radio" name="q2" value="1"> Fauji</label>
+      <label><input type="radio" name="q2" value="2"> Aap hamesha se mera superhero ho</label>
+      <label><input type="radio" name="q2" value="3"> Dramebaaz Man</label>
+      <p class="answer-label">ANSWER WITH ❤️</p>
+      <button type="button" onclick="nextQuestion(2)">Next</button>
+    </form>
+  </div>
+
+  <div id="question3" class="screen hidden">
+    <h1 class="question-heading">Q3: Aapko mere mein sabse ajeeb ya annoying baat kya lagti hai?</h1>
+    <form>
+      <label><input type="radio" name="q3" value="1"> Har waqt bakbak karta rehta hoon</label>
+      <label><input type="radio" name="q3" value="2"> Har baat mein drama</label>
+      <label><input type="radio" name="q3" value="3"> Kabhi kabhi apna dard chhupa leta hoon 💔</label>
+      <p class="answer-label">ANSWER WITH ❤️</p>
+      <button type="button" onclick="nextQuestion(3)">Next</button>
+    </form>
+  </div>
+
+  <div id="question4" class="screen hidden">
+    <h1 class="question-heading">Q4: Aapko mere mein sabse achhi baat kya lagti hai?</h1>
+    <form>
+      <label><input type="radio" name="q4" value="1"> Hamesha sath deta hoon</label>
+      <label><input type="radio" name="q4" value="2"> Mujhe hassata hoon</label>
+      <label><input type="radio" name="q4" value="3"> Dil ka saaf hoon ❤️</label>
+      <p class="answer-label">ANSWER WITH ❤️</p>
+      <button type="button" onclick="showMemories()">Next</button>
+    </form>
+  </div>
+
+  <!-- Memory Screens -->
+  <div id="memoryScreen" class="screen hidden">
+    <img id="memoryImage" src="" alt="memory" class="memory-img">
+    <p id="memoryCaption" class="memory-caption"></p>
+    <button onclick="nextMemory()">Next Memory</button>
+  </div>
+
+  <!-- Final Page -->
+  <div id="finalPage" class="screen hidden">
+    <img src="final-sister.jpg" class="final-pic" alt="Hamari yaadgar photo ❤️" />
+
+    <div class="final-message">
+      <p style="font-size: 1.2em; color: #6a1b9a; line-height: 1.6em;">
+        Aap meri zindagi ki sabse khoobsurat gift hain. Main ne Allah se bohot mang kar aapko paaya hai. 💖<br><br>
+        Meri dua hai ke humesha aap mere saath rahain. Kabhi aap mujh se naraz na ho. 🙏<br><br>
+        Aap ke baghair meri family adhoori hai. 🫂
+      </p>
+      <p class="glitter-text">LOVE YOU BEHNA ❤️</p>
     </div>
+
+    <div class="code-display" id="surpriseCode"></div>
+    <canvas id="fireworks-canvas"></canvas>
   </div>
 
-  <!-- 🌸 Memory Container -->
-  <div id="memoryContainer" class="screen hidden">
-    <img id="memoryImage" src="" alt="Memory Image" />
-    <p id="memoryCaption"></p>
-    <button class="start-btn" onclick="nextMemory()">Next</button>
-  </div>
-
-  <!-- 🌸 Final Page -->
- <div class="final-message">
-  <p style="font-size: 1.2em; color: #6a1b9a; line-height: 1.6em;">
-    Aap meri zindagi ki sabse khoobsurat gift hain. Main ne Allah se bohot mang kar aapko paaya hai. 💖<br><br>
-    Meri dua hai ke humesha aap mere saath rahain. Kabhi aap mujh se naraz na ho. 🙏<br><br>
-    Aap ke baghair meri family adhoori hai. 🫂
-  </p>
-
-  <p class="glitter-text">LOVE YOU BEHNA ❤️</p>
-</div>
-
-  <!-- 🌸 Audio -->
-  <audio id="welcomeAudio" src="welcome.mp3"></audio>
-  <audio id="gateAudio" src="gate.mp3"></audio>
-  <audio id="questionsAudio" src="questions.mp3"></audio>
-  <audio id="memoriesAudio" src="memories.mp3"></audio>
-  <audio id="finalAudio" src="final.mp3"></audio>
-
-  <!-- 🌸 Scripts -->
-  <script src="script.js"></script>
-  <div class="code-display" id="surpriseCode"></div>
-
-  <canvas id="fireworks-canvas"></canvas> <!-- 🎆 Fireworks canvas -->
-
+  <!-- Scripts -->
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.0/dist/fireworks.js"></script>
 </body>
