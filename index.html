@@ -1,52 +1,107 @@
+<!-- =============================== -->
+<!--         question1.html         -->
+<!-- =============================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Sister Day 💖</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question 1 - Trust</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
-  <!-- 🌸 Welcome Screen -->
-  <div id="welcomeScreen" class="screen">
-    <h1 class="welcome-text">Welcome My Lovely Behen ❤</h1>
-    <button onclick="startExperience()" class="start-btn">Click to Begin</button>
+<body class="question-page">
+  <div class="container">
+    <h1 class="question-heading">Q1: Kya aapko mujh par trust hai?</h1>
+    <form id="question1Form">
+      <label><input type="radio" name="answer" value="Hamesha se tha ❤️" required /> Hamesha se tha ❤️</label>
+      <label><input type="radio" name="answer" value="Thoda kam ho gaya hai" /> Thoda kam ho gaya hai</label>
+      <label><input type="radio" name="answer" value="Khud se bhi zyada hai ❤️‍🔥" /> Khud se bhi zyada hai ❤️‍🔥</label>
+      <p class="answer-label">ANSWER WITH ❤️</p>
+      <button type="submit" class="submit-btn">Next</button>
+    </form>
   </div>
+  <div class="floating-emojis"></div>
+  <script src="script.js"></script>
+</body>
+</html>
 
-  <!-- 🌸 Gate Animation Screen -->
-  <div id="gateScreen" class="screen hidden">
-    <div class="gate left-gate"></div>
-    <div class="gate right-gate"></div>
-    <div class="gate-message">Ready for the Magic?</div>
+<!-- =============================== -->
+<!--         question2.html         -->
+<!-- =============================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question 2 - Superhero</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="question-page">
+  <div class="container">
+    <h1 class="question-heading">Q2: Agar main superhero hota, to kaunsa hota?</h1>
+    <form id="question2Form">
+      <label><input type="radio" name="answer" value="Fauji" required /> Fauji</label>
+      <label><input type="radio" name="answer" value="Aap hamesha se mera superhero ho" /> Aap hamesha se mera superhero ho</label>
+      <label><input type="radio" name="answer" value="Dramebaaz Man" /> Dramebaaz Man</label>
+      <p class="answer-label">ANSWER WITH ❤️</p>
+      <button type="submit" class="submit-btn">Next</button>
+    </form>
   </div>
+  <div class="floating-emojis"></div>
+  <script src="script.js"></script>
+</body>
+</html>
 
-  <!-- 🌸 Questions -->
-  <div id="questionContainer" class="screen hidden">
-    <div id="questionBox">
-      <h2 id="questionText"></h2>
-      <div id="optionsContainer"></div>
-    </div>
+<!-- =============================== -->
+<!--         question3.html         -->
+<!-- =============================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question 3 - Annoying Trait</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="question-page">
+  <div class="container">
+    <h1 class="question-heading">Q3: Aapko mere mein sabse ajeeb ya annoying baat kya lagti hai?</h1>
+    <form id="question3Form">
+      <label><input type="radio" name="answer" value="Har waqt bakbak karta rehta hoon" required /> Har waqt bakbak karta rehta hoon</label>
+      <label><input type="radio" name="answer" value="Har baat mein drama" /> Har baat mein drama</label>
+      <label><input type="radio" name="answer" value="Kabhi kabhi apna dard chhupa leta hoon 💔" /> Kabhi kabhi apna dard chhupa leta hoon 💔</label>
+      <p class="answer-label">ANSWER WITH ❤️</p>
+      <button type="submit" class="submit-btn">Next</button>
+    </form>
   </div>
+  <div class="floating-emojis"></div>
+  <script src="script.js"></script>
+</body>
+</html>
 
-  <!-- 🌸 Memory Pages -->
-  <div id="memoryContainer" class="screen hidden">
-    <img id="memoryImage" src="" alt="Memory" />
-    <p id="memoryCaption"></p>
-    <button onclick="nextMemory()">Next</button>
+<!-- =============================== -->
+<!--         question4.html         -->
+<!-- =============================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question 4 - Best Trait</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="question-page">
+  <div class="container">
+    <h1 class="question-heading">Q4: Aapko mere mein sabse achhi baat kya lagti hai?</h1>
+    <form id="question4Form">
+      <label><input type="radio" name="answer" value="Hamesha sath deta hoon" required /> Hamesha sath deta hoon</label>
+      <label><input type="radio" name="answer" value="Mujhe hassata hoon" /> Mujhe hassata hoon</label>
+      <label><input type="radio" name="answer" value="Dil ka saaf hoon ❤️" /> Dil ka saaf hoon ❤️</label>
+      <p class="answer-label">ANSWER WITH ❤️</p>
+      <button type="submit" class="submit-btn">Next</button>
+    </form>
   </div>
-
-  <!-- 🌸 Final Page -->
-  <div id="finalPage" class="screen hidden">
-    <img src="final-memory.jpg" class="final-pic" />
-    <h2>Happy Sister Day ❤</h2>
-    <p class="final-message">
-      You are the biggest blessing in my life. Thank you for everything. LOVE YOU BEHNA ❤
-    </p>
-    <p id="surpriseCode" class="code-display"></p>
-  </div>
-
-  <!-- JS -->
+  <div class="floating-emojis"></div>
   <script src="script.js"></script>
 </body>
 </html>
