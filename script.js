@@ -38,10 +38,11 @@ const questions = [
 ];
 
 const memories = [
-  { src: "chai-memory.jpg", caption: "Woh chai wali shaam ❤️" },
-  { src: "picnic-memory.jpg", caption: "Hamari picnic wali yaad 🌿" },
-  { src: "memory-1.jpg", caption: "Bus hum dono... aur hasi 😄" },
-  { src: "memory-2.jpg", caption: "Woh chhoti si baat... lekin yaadgar 📸" }
+  { src: "chai.jpg", caption: "Shaam ki chai aur gupshup... ☕❤️" },
+  { src: "ludo.jpg", caption: "Ludo Khelta Howa Apka Gussa or Naraz hona 😅🎲" },
+  { src: "picnic-memory.jpg", caption: " ☀️🌿" },
+  { src: "batain.jpg", caption: "Yeh woh pal hain jo hamesha mere dil ke kareeb rahenge... ❤ 💬✨" },
+  { src: "final-sister.jpg", caption: "Bas tu thi, main tha... aur ek khoobsurat yaad ❤️📸" }
 ];
 
 let currentQuestion = 0;
