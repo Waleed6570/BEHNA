@@ -57,3 +57,33 @@ const finalPage = document.getElementById("finalPage");
 const questionText = document.getElementById("questionText");
 const optionsContainer = document.getElementById("optionsContainer");
 const memoryImage = docu
+function showFinalPage() {
+  hideAllScreens();
+  document.getElementById("finalPage").classList.remove("hidden");
+
+  const code = calculateFinalCode();
+  document.getElementById("surpriseCode").textContent = "Your Surprise Code: " + code;
+
+  // 🎆 Fireworks trigger
+  const container = document.getElementById('fireworks-canvas');
+  const fireworks = new Fireworks(container, {
+    speed: 2,
+    acceleration: 1.05,
+    friction: 0.97,
+    gravity: 1.5,
+    particles: 65,
+    explosion: 5,
+    intensity: 30,
+    trace: 3,
+    autoresize: true,
+    brightness: {
+      min: 50,
+      max: 80,
+      decay: {
+        min: 0.015,
+        max: 0.03
+      }
+    }
+  });
+  fireworks.start();
+}
